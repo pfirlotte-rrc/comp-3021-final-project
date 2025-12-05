@@ -1,0 +1,8 @@
+node_modules/
+dist/
+
+.vscode/
+
+comp-3018-assignment-4-23385-firebase-adminsdk-fbsvc-1ee3d2ded3.json
+
+logs/
