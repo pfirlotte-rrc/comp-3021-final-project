@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donation Tracker</title>
+  <link rel="stylesheet" href="template.css">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+
+  <header>
+    <button id="switch-page">Go to volunteering hours tracker</button>
+  </header>
+
+  <main>
+    <form id="donationForm">
+      <h1>Donation Tracker</h1>
+
+      <label for="charityName">Charity Name:</label><br>
+
+      <input type="text" id="charityName" name="charityName" placeholder= "Enter the charity name" required><br><br>
+
+      <label for="donationAmount">Donation Amount:</label><br>
+      <input type="number" id="donationAmount" name="donationAmount" placeholder= "Enter Donation Amount" required><br><br>
+
+      <label for="donationDate">Date of Donation:</label><br>
+      <input type="date" id="donationDate" name="donationDate" required><br><br>
+
+      <label for="donorMessage">Donor Message:</label><br>
+      <textarea id="donorMessage" name="donorMessage" rows="4" cols="50" placeholder="Write your message here..."></textarea><br><br>
+
+      <button type="submit">Submit Donation</button>
+      <div id="confirmationMessage"></div>
+    </form>
+    <div>
+      <table>
+				<thead>
+					<tr>
+						<th>Charity Name</th>
+						<th>Donation Amount</th>
+            <th>Date of Donation</th>
+            <th>Donor Message</th>
+					</tr>
+				</thead>
+				<tbody id="donationTable">
+
+				</tbody>
+      </table>
+      <h4>Total Donations</h4>
+      <div id="donationTotal">
+
+      </div>
+  </main>
+
+    <!-- Footer -->
+
+  <footer>
+    <script src="script.js"></script>
+  </footer>
+
+</body>
+</html>

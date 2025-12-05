@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Project Template HTML File</title>
+    <link rel="stylesheet" href="template.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<header>
+    <button id="switch-page">Go to donation tracker</button>
+</header>
+<body>
+    <main>
+        <form id="submissionForm" >
+            <h1>Volunteer Hours Tracker</h1>
+            <div class="input-container">
+                <label for="name">Enter your Name:</label>
+                <input type="text" id="name" name="name" />
+            </div>
+            <div class="input-container">
+                <label for="email">Enter your Email:</label>
+                <input type="text" id="email" name="email" />
+            </div>
+            <div class="input-container">
+                <label for="charity-name">Enter the name of the Charity Organization that you volunteered at:</label>
+                <input type="text" id="charity-name" name="charity-name" />
+            </div>
+            <div class="input-container" id="radio-options">
+                <label for="options">Out of 5, how much did you enjoy yor volunteering experience?</label> <br>
+                <input type="radio" id="option1" name="options" value="1">
+                <label for="option1">1</label>
+                <input type="radio" id="option2" name="options" value="2">
+                <label for="option2">2</label>
+                <input type="radio" id="option3" name="options" value="3">
+                <label for="option3">3</label>
+                <input type="radio" id="option4" name="options" value="4">
+                <label for="option4">4</label>
+                <input type="radio" id="option5" name="options" value="5">
+                <label for="option5">5</label>
+                <span id="radioError" class="error-message" aria-live="polite"></span>
+            </div>			
+
+            <div class="input-container">
+                <label for="quantity">How many hours of volunteering did you do?</label>
+                <input type="number" id="hours-quantity" name="quantity" min="0" max="99">
+            </div>
+            <div class="input-container">
+                <label for="specificDate">What day did you volunteer?</label>
+                <input type="date" id="specificDate" name="specificDate">
+            </div>
+            <button type="submit">Register</button>
+            <button type="reset">Reset</button>
+        </form>
+        <table id="history-table">
+            <thead>
+                <tr>
+                    <th>Charity</th>
+                    <th>Hours worked</th>
+                    <th>Date</th>
+                    <th>Experience rating</th>
+                </tr>
+            </thead>
+            <tbody id="history-logs">
+                <!--Here go the table elements (via JS)-->
+            </tbody>
+        </table>
+        <div id="total-hours-container">
+            <h4 id="total-hours"></h4>
+        </div>
+    </main>
+    <footer>
+        <script src="volunteer_hours_script.js"></script>
+    </footer>
+</body>
+</html>
