@@ -1,0 +1,56 @@
+body {
+	font-family: "Garamond", sans-serif;
+	background-color: #f4f4f4;
+	color: #333;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	height: 100vh;
+}
+
+form {
+	width: 90%;
+	max-width: 30em;
+	background: white;
+	padding: 2em;
+	border-radius: 1em;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	text-align:start;
+}
+
+input, select, textarea {
+	/* width: 100%; */
+	padding: 0.6em;
+	margin-top: .70em;
+	margin-bottom: .70em;
+	border: 1px solid #ddd;
+	border-radius: 0.25em;
+}
+
+#radio-options, #checkbox-options{
+    padding: 0.625em;
+   	border: 1px solid #ddd;
+	border-radius: 0.25em;
+    justify-content: left;
+    align-items: left;
+}
+
+button {
+    background-color: #006da3;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+button:hover {
+	background-color: #9defff;
+}
+
+.error-message {
+	color: red;
+	font-size: 0.9em;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
