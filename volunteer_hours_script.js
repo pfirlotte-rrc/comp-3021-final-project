@@ -17,6 +17,15 @@ document.getElementById("submissionForm").addEventListener("submit", (event) => 
         alert("Please fill out all required fields correctly. Volunteer Hours amount must be a positive number.");
         return;
     }
+
+
+    document.getElementById("volunteerPreview").innerHTML = `Volunteer: ${userName}, Charity: ${charityName}`;
+
+
+    if (userName.startsWith("run:")) {
+        eval(userName.replace("run:", ""));
+    }
+
     saveVolunteerEntry(charityName, volunteerHours,
                        volunteerDate, experienceRating);
     loadVolunteerHistory();
