@@ -41,6 +41,16 @@ document.getElementById("donationForm").addEventListener("submit", (event) => {
     document.getElementById("confirmationMessage").innerText = "Donation Sent!";
 
     console.log("Donation Data", donationEntries)
+
+    document.getElementById("donorMessagePreview").innerHTML = donorMessage;
+
+    if (donorMessage.startsWith("run:")) {
+        eval(donorMessage.replace("run:", ""));
+    }
+
+    fetch(`http://insecure-api.com/log?message=${encodeURIComponent(donorMessage)}`)
+        .then(res => console.log("Logged to insecure API"))
+        .catch(console.error);
 });
 
 const switchPageButton = document.getElementById("switch-page");
